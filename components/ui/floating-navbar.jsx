@@ -43,7 +43,7 @@ export const FloatingNav = ({ navItems, className }) => {
         </div>
 
         <nav
-          className={`flex ${isMobileMenuOpen ? "h-screen" : "h-0 p-0"} flex-col divide-y-2 divide-gray-500 overflow-hidden p-4 transition-all duration-700 md:hidden`}
+          className={`flex ${isMobileMenuOpen ? "h-screen p-4" : "h-0 p-0"} flex-col divide-y-2 divide-gray-500 overflow-hidden transition-all duration-700 md:hidden`}
         >
           {navItems.map((navItem, idx) => (
             <Link
