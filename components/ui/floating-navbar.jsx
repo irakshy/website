@@ -17,22 +17,44 @@ export const FloatingNav = ({ navItems, className }) => {
         className,
       )}
     >
-      <div className="container flex items-center justify-between space-x-4 px-32 py-6">
-        {/* Logo */}
-        <Link className="text-2xl font-bold italic" href={"/"}>
-          LOGO
-        </Link>
-        {/* Desktop Navigation */}
-        <nav className="hidden items-center justify-center space-x-14 md:flex">
+      <div className="flex flex-col">
+        <div className="container flex items-center justify-between space-x-4 py-6 md:px-32">
+          {/* Logo */}
+          <Link className="text-2xl font-bold italic" href={"/"}>
+            LOGO
+          </Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden items-center justify-center space-x-14 md:flex">
+            {navItems.map((navItem, idx) => (
+              <Link
+                key={`link=${idx}`}
+                href={navItem.link}
+                className={cn(
+                  "relative flex items-center space-x-1 text-foreground hover:text-foreground",
+                )}
+              >
+                <span className="hidden text-sm sm:block">{navItem.name}</span>
+              </Link>
+            ))}
+          </nav>
+          <button className="md:hidden" onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
+
+        <nav
+          className={`flex ${isMobileMenuOpen ? "h-screen" : "h-0 p-0"} flex-col divide-y-2 divide-gray-500 overflow-hidden p-4 transition-all duration-700 md:hidden`}
+        >
           {navItems.map((navItem, idx) => (
             <Link
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative flex items-center space-x-1 text-foreground hover:text-foreground",
+                "p-2 text-2xl text-foreground hover:text-foreground",
               )}
             >
-              <span className="hidden text-sm sm:block">{navItem.name}</span>
+              {navItem.name}
+              <span className=""></span>
             </Link>
           ))}
         </nav>
