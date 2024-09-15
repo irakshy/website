@@ -18,7 +18,7 @@ export const FloatingNav = ({ navItems, className }) => {
       )}
     >
       <div className="flex flex-col">
-        <div className="container flex items-center justify-between space-x-4 py-4 md:px-32 md:py-6">
+        <div className="container flex items-center justify-between space-x-4 py-4 md:px-32 md:py-4">
           {/* Logo */}
           <Link className="text-2xl font-bold italic" href={"/"}>
             LOGO

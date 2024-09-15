@@ -25,22 +25,22 @@ const About = () => {
             stand out in your industry.
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2">
             <h1 className="text-5xl font-semibold">
               Research & <br /> Brand Strategy
             </h1>
-            <ul className="list-disc text-3xl">
+            <ul className="list-disc px-2 text-3xl md:px-0">
               <li>Brand Strategy</li>
               <li>Research & Insights</li>
               <li>Content Marketing</li>
               <li>User Experience Research</li>
             </ul>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2">
             <h1 className="text-5xl font-semibold">
               Research & <br /> Brand Strategy
             </h1>
-            <ul className="list-disc text-3xl">
+            <ul className="list-disc px-2 text-3xl md:px-0">
               <li>Brand Strategy</li>
               <li>Research & Insights</li>
               <li>Content Marketing</li>
