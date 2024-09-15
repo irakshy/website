@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <main className="h-[85svh] bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]">
+    <main className="h-[90svh] bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]">
       <div className="container h-full space-y-28 py-16">
         <div className="flex h-full items-center justify-center">
           <h1 className="text-4xl font-bold">

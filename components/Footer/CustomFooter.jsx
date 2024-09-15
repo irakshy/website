@@ -6,10 +6,10 @@ import { FaXTwitter } from "react-icons/fa6";
 const CustomFooter = () => {
   return (
     <footer className="border-t-2 border-white bg-black bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.2]">
-      <div className="container flex flex-col items-center justify-between gap-6 py-4 md:flex-row md:py-8">
+      <div className="container flex flex-col items-center justify-between gap-2 py-3 md:flex-row md:py-8">
         <Link
           href={"/contact"}
-          className="rounded-2xl border-2 border-white bg-black px-2 py-2 font-extrabold text-white md:px-4"
+          className="rounded-2xl border-2 border-white bg-black px-4 py-2 text-xs font-extrabold text-white md:px-4"
         >
           GET IN TOUCH
         </Link>
