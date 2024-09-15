@@ -18,7 +18,7 @@ export const FloatingNav = ({ navItems, className }) => {
       )}
     >
       <div className="flex flex-col">
-        <div className="container flex items-center justify-between space-x-4 py-6 md:px-32">
+        <div className="container flex items-center justify-between space-x-4 py-4 md:px-32 md:py-6">
           {/* Logo */}
           <Link className="text-2xl font-bold italic" href={"/"}>
             LOGO
@@ -37,7 +37,7 @@ export const FloatingNav = ({ navItems, className }) => {
               </Link>
             ))}
           </nav>
-          <button className="md:hidden" onClick={toggleMobileMenu}>
+          <button className="text-3xl md:hidden" onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <HiX /> : <HiMenu />}
           </button>
         </div>
@@ -52,6 +52,7 @@ export const FloatingNav = ({ navItems, className }) => {
               className={cn(
                 "p-2 text-2xl text-foreground hover:text-foreground",
               )}
+              onClick={toggleMobileMenu}
             >
               {navItem.name}
               <span className=""></span>

@@ -15,14 +15,14 @@ export default function Hero() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="dark:bg-grid-small-white/[0.1] bg-grid-small-black/[0.2] relative flex h-full w-full flex-col items-center justify-center gap-4 px-4"
+        className="relative flex h-full w-full flex-col items-center justify-center gap-4 px-4 bg-grid-small-black/[0.2] dark:bg-grid-small-white/[0.1]"
       >
-        <div className="dark:text-white text-3xl font-bold md:text-7xl">
-          Hi , Im Rakshy
+        <div className="text-3xl font-bold transition-all duration-1000 dark:text-white md:text-7xl md:hover:text-8xl">
+          Hi, {"I'"}m Rakshith
         </div>
-        <div className="dark:text-neutral-200 max-w-4xl py-4 text-base font-extralight md:text-4xl">
-          kittu gudde hakana kittu gudde hakana kittu gudde hakana kittu gudde
-          hakana kittu gudde hakana kittu gudde hakana
+        <div className="max-w-4xl py-4 pt-10 text-base font-bold dark:text-neutral-200 md:text-4xl">
+          <span className="animate-bounce text-[#c12d10]">/Website </span>
+          <span className="animate-pulse">Coming Soon...</span>
         </div>
       </motion.div>
     </AuroraBackground>

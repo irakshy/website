@@ -65,10 +65,21 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground bg-background;
+    @apply bg-background text-foreground;
   }
 }
 
 body {
   font-family: "Nunito", system-ui;
+  background-color: black;
+}
+
+.gradient-background {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.4066001400560224) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }

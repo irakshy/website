@@ -1,3 +1,4 @@
+import CustomFooter from "@/components/Footer/CustomFooter";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className={`dark antialiased`}>
         <Navbar />
         {children}
+        <CustomFooter />
       </body>
     </html>
   );
