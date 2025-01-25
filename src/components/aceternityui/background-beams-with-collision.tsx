@@ -54,7 +54,7 @@ export const BackgroundBeamsWithCollision = ({
       translateX: 350,
       duration: 5,
       repeatDelay: 3,
-      delay: 4,
+      delay: 2,
     },
     {
       initialX: 400,
