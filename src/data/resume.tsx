@@ -684,3 +684,47 @@ export const DATA = {
     },
   ],
 } as const;
+
+export type WorkExperience = {
+  company: string;
+  href: string;
+  location: string;
+  title: string;
+  logoUrl: string;
+  start: string;
+  end: string;
+  description?: string;
+  badges: readonly string[];
+};
+export type Education = {
+  school: string;
+  href: string;
+  degree: string;
+  logoUrl: string;
+  start: string;
+  end: string;
+};
+export type SocialLink = {
+  name: string;
+  url: string;
+  icon: keyof typeof Icons;
+  navbar: boolean;
+};
+
+export type NavItem = {
+  href: string;
+  icon: typeof HomeIcon | typeof NotebookIcon | typeof Contact;
+  label: string;
+};
+
+export type ContactInfo = {
+  email: string;
+  tel: string;
+  social: Readonly<Record<string, SocialLink>>;
+};
+
+export type DataType = Readonly<{
+  work: readonly WorkExperience[];
+  contact: ContactInfo;
+  navbar: readonly NavItem[];
+}>;
