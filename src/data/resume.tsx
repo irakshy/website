@@ -94,7 +94,7 @@ export const DATA = {
       start: "Oct 2024",
       end: "Jan 2025",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Spearheaded product development from concept to execution, managing feature prioritization and iterative design improvements. Led cross-functional teams as project manager, coordinating frontend/backend integration and conducting market analysis. Pioneered RAG architecture research and implementation. Conducted competitive analysis to drive feature roadmap decisions while maintaining technical alignment between engineering teams and product vision.",
     },
     {
       company: "42Gears",
