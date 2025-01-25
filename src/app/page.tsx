@@ -6,6 +6,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA, Education, WorkExperience } from "@/data/resume";
+import { MapPin, MapPinned } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -45,9 +46,41 @@ export default function Page() {
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+          <Markdown
+            components={{
+              a: ({ children, ...props }) => {
+                return (
+                  <a
+                    className=" hover:underline"
+                    target="_blank"
+                    rel="noreferrer"
+                    {...props}
+                  >
+                    {children}
+                  </a>
+                );
+              },
+            }}
+            className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
+          >
             {DATA.summary}
           </Markdown>
+        </BlurFade>
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <div className="flex justify-end items-center  mt-8">
+            <Link
+              href={DATA.locationLink}
+              target="_blank"
+              className=" flex gap-2 items-center "
+            >
+              <MapPin
+                size={18}
+                className="animate-bounce animate-infinite animate-ease-linear"
+              />
+
+              <span>{DATA.location}</span>
+            </Link>
+          </div>
         </BlurFade>
       </section>
       <section id="work">
@@ -155,49 +188,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Hackathons
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in university, I attended{" "}
-                  {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
-                  days. It was eye-opening to see the endless possibilities
-                  brought to life by a group of motivated and passionate
-                  individuals.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.hackathons.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                    links={project.links}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
-        </div>
-      </section>
+
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
