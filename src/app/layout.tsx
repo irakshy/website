@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/aceternityui/aurora-background";
+import { BackgroundBeamsWithCollision } from "@/components/aceternityui/background-beams-with-collision";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -66,6 +67,9 @@ export default function RootLayout({
           {/* <AuroraBackground className="h-screen  w-full  fixed top-0  max-h-screen  ">
             <></>
           </AuroraBackground> */}
+          <BackgroundBeamsWithCollision className="h-screen  w-full  fixed top-0 py-8  max-h-screen  ">
+            <></>
+          </BackgroundBeamsWithCollision>
           <div className=" max-w-3xl mx-auto py-12  sm:py-24 px-6 h-full overflow-auto">
             <TooltipProvider delayDuration={0}>
               {children}
