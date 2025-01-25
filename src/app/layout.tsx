@@ -63,14 +63,15 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <AuroraBackground className="h-full  w-full   mx-auto py-12  sm:py-24 px-6  ">
-            <div className=" max-w-3xl">
-              <TooltipProvider delayDuration={0}>
-                {children}
-                <Navbar />
-              </TooltipProvider>
-            </div>
+          <AuroraBackground className="h-screen  w-full  fixed top-0  max-h-screen  ">
+            <></>
           </AuroraBackground>
+          <div className=" max-w-3xl mx-auto py-12  sm:py-24 px-6 h-full overflow-auto">
+            <TooltipProvider delayDuration={0}>
+              {children}
+              <Navbar />
+            </TooltipProvider>
+          </div>
         </ThemeProvider>
       </body>
     </html>
