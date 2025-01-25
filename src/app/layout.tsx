@@ -67,7 +67,7 @@ export default function RootLayout({
           {/* <AuroraBackground className="h-screen  w-full  fixed top-0  max-h-screen  ">
             <></>
           </AuroraBackground> */}
-          <BackgroundBeamsWithCollision className="h-screen  w-full  fixed top-0 py-8  max-h-screen  ">
+          <BackgroundBeamsWithCollision className="h-screen  w-full  fixed top-0 max-h-[99svh]  ">
             <></>
           </BackgroundBeamsWithCollision>
           <div className=" max-w-3xl mx-auto py-12  sm:py-24 px-6 h-full overflow-auto">
